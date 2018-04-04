@@ -165,7 +165,7 @@ $(document).ready(function() {
 
         // LAST.FM API
         var lastFmId = 'beecd54d4bc8bcad4a659854011009a1';
-        var queryURL = 'http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=' + rapper + '&api_key=' + lastFmId + '&format=json';
+        var queryURL = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=' + rapper + '&api_key=' + lastFmId + '&format=json';
 
         $.ajax({
             url: queryURL,
