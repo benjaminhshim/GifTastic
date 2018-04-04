@@ -3,27 +3,85 @@
     <head>
         <meta charset="UTF-8">
         <title>GifTastic</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     </head>
     
     <body>
+        
+        <div class='search-form'>
+            <form id="rapper-form">
+                <label for="rapper-input" class="header">RapGif Generator</label><br>
+                <input type="text" id="rapper-input" class='col-4 text-center'><br>
 
-        <div id="rapperButtons">
+                <input id="addRapper" class='btn btn-light' type="submit" value="add rapper">
+                <img src="assets/images/bandsintown-logo.png" id="bit-logo">
 
+            </form>
         </div>
 
-        <form id="rapper-form">
-            <label for="rapper-input">Add a Rapper</label>
-            <input type="text" id="rapper-input"><br>
 
-            <input id="addRapper" type="submit" value="Submit">
-        </form>
+        <div class="container">
+            <div class="row">
 
-        <div id="rappers">
+                <div id="rappers" class="col-4">                    
+                    <h3>GIFs</h3>
+                </div>
+
+                <div id="show-dates" class="col-4">
+                    <h3>Show Dates</h3>
+
+                    <!-- HERE IS THE BOOTSTRAP FOR A CARD WHICH IS TO BE DYNAMICALLY GENERATED WITH JQUERY -->
+
+                    <!-- <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text" id="venue-name"></p>
+                            <p class="card-text" id="date-time"></p>
+                            <p class="card-text" id="ticket-status"></p>
+                        </div>
+                    </div> -->
+                    
+                </div>
+
+                <div id="button-div" class="col-4">
+                    <h3>Generate</h3>
+                    <div id="rapperButtons"></div>
+
+                    <div id="youtube">
+                    <h3>Top Music Video</h3>
+                        <iframe id="ytplayer" type="text/html" width="350" height="300" src="" frameborder="0"></iframe>
+                </div>
+
+                <div id="top-songs">
+                    <h3>Top Songs</h3>
+                    <img id="last-fm-img" src="assets/images/last-fm.png">
+                </div>
+
+            
+                <!-- <div class="card" style="width: 18rem;">
+                    <div class="song-card-body">
+                        <p class="card-text" id="last-fm-song-title"></p>
+                        <p class="card-text" id="last-fm-playcount"></p>
+                        <p class="card-text" id="last-fm-listeners"></p>
+                    </div>
+                </div> -->
+            
+                
+
+
+            </div>
 
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="assets/javascript/app.js"></script>
+
     </body>
 </html>

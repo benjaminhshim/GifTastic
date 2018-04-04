@@ -1,0 +1,105 @@
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Helvetica Neue';
+    background: black;
+}
+
+form {
+    text-align: center;
+}
+
+.btn {
+    margin: 10px;
+}
+
+#button-div {
+    text-align: center;
+}
+
+.item {
+    margin: 10px auto 10px auto;
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+
+}
+
+.search-form {
+    background: url('../images/giphy-api.gif');
+    height: 550px;
+
+    padding: 20px;
+    width: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 20px auto;
+}
+
+.header {
+    font-size: 48px;
+    color: white;
+    margin-top: 20px;
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
+}
+
+.card {
+    background: black;
+    border: 1px solid white;
+    color: white;
+    margin: 10px;
+    height: 275px;
+    margin-top: 20px;
+    /* padding-top: 30px; */
+}
+
+h3 {
+    color: rgb(72, 187, 172);
+    text-align: center;
+}
+
+/* .search-form {
+    position: absolute;
+} */
+
+#bit-logo {
+    position: absolute;
+    bottom: 0;
+    width: 33%;
+    margin: 0 auto;
+    top: 425px;
+    left: 550px;
+
+}
+
+.artist-name {
+    float: left;
+}
+
+#fav-star {
+    color: white;
+    font-size: 18px;
+}
+
+#youtube {
+    margin-top: 50px;
+}
+
+#top-songs {
+    color: white;
+    margin-top: 20px;
+}
+
+#song-card {
+    border-top: 1px solid white;
+    line-height: 0.5;
+    text-align: center;
+}
+
+#last-fm-img {
+    height: 15px;
+    width: 75;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
