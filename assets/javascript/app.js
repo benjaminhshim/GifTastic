@@ -14,7 +14,7 @@ $(document).ready(function() {
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + rapper + "&api_key=dc6zaTOxFJmzC&limit=10&fixed_width=100";
 
 
-        // CREATE AJAX REQUEST
+        // CREATE AJAX REQUEST FOR GIPHY API
         $.ajax({
             url: queryURL,
             method: 'GET'
@@ -67,6 +67,24 @@ $(document).ready(function() {
                 // APPEND EACH DIV OF GIFS TO #rappers IN WINDOW
                 $("#rappers").append(gifDiv);
             };
+
+
+
+            // CREATE CLICK FUNCTION FOR UNPAUSING & PAUSING GIF ANIMATION
+            $('img').click(function() {
+                var $state = $(this).attr('data-state');
+
+                var dataAnimate = $(this).attr('data-animate');
+                var dataStill = $(this).attr('data-still');
+                
+                if ( $state == 'still' ) {
+                    $(this).attr('src', dataAnimate);
+                    $(this).attr('data-state', 'animate');
+                } else if ( $state == 'animate' ) {
+                    $(this).attr('src', dataStill);
+                    $(this).attr('data-state', 'still');
+                }
+            });
         });
 
 
@@ -211,21 +229,6 @@ $(document).ready(function() {
 
 
 
-        // CREATE CLICK FUNCTION FOR UNPAUSING & PAUSING GIF ANIMATION
-        $('img').click(function() {
-            var $state = $(this).attr('data-state');
-
-            var dataAnimate = $(this).attr('data-animate');
-            var dataStill = $(this).attr('data-still');
-            
-            if ( $state == 'still' ) {
-                $(this).attr('src', dataAnimate);
-                $(this).attr('data-state', 'animate');
-            } else if ( $state == 'animate' ) {
-                $(this).attr('src', dataStill);
-                $(this).attr('data-state', 'still');
-            }
-        });
 
 
         
@@ -269,6 +272,7 @@ $(document).ready(function() {
 
         event.preventDefault();
 
+
         // STORE INPUT VALUE INTO VARIABLE
         var rapper = $('#rapper-input').val().toUpperCase();;
 
@@ -277,6 +281,9 @@ $(document).ready(function() {
 
         // CALL FUNCTION TO CREATE BUTTON
         renderButtons();
+
+        $('#rapper-input').val('');
+
         
     });
 

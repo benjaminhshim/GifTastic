@@ -103,3 +103,87 @@ h3 {
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
+.right-div {
+    float: right;
+    order: 3;
+}
+
+.media {
+    display: flex;
+}
+
+/* ----------- MEDIA QUERIES ---------------- */
+
+@media screen and (max-width: 767px) {
+
+    .search-form {
+        background: none;
+        height: 250px;
+        margin: 0 auto;
+        margin-bottom: -20px;
+    }
+
+    .header {
+        font-size: 48px;
+        color: white;
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Helvetica Neue';
+        font-weight: bold;
+    }
+
+    .right-div {
+        float: none;
+        order: 0;
+    }
+
+    .top-header {
+        /* border-bottom: 1px solid white; */
+        margin-bottom: 50px;
+        background: rgb(72, 187, 172);
+        /* background: black; */
+        box-shadow: 0px 1px 10px 2px gray;
+    }
+
+    body {
+        background: white;
+    }
+
+    .rapper-btn {
+        color: white;
+        background-color: rgb(72, 187, 172);
+    }
+
+    h3 {
+        color: black;
+    }
+
+    #top-songs {
+        color: black;
+    }
+
+    #song-card {
+        border-top: 1px solid rgb(72, 187, 172);
+
+    }
+
+    .card {
+        /* border: 1px solid rgb(72, 187, 172); */
+
+        /* color: rgb(72, 187, 172);
+        background: white; */
+        box-shadow: 0px 2px 15px -1px rgb(124, 124, 124);
+
+
+        color: white;
+        background: rgb(72, 187, 172);
+        border: none;
+        /* box-shadow: 0 8px 6px -6px black; */
+
+    }
+
+    #rappers {
+        text-align: center;
+    }
+}
